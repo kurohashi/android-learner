@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.hello);
         com.sdk.learner1.MainActivity m = new com.sdk.learner1.MainActivity();
         textView.setText(m.getText());
-//        Intent intent = new Intent(this, com.sdk.learner1.MainActivity.class);
+//        Intent intent = new Intent(getApplicationContext(), com.sdk.learner1.MainActivity.class);
 //        intent.putExtra("com.sdk.learner1.MESSAGE", m.getText());
 //        startActivity(intent);
     }
