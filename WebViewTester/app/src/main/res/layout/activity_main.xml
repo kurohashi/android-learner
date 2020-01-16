@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_x="161dp"
         android:layout_y="268dp"
+        android:onClick="setTrue"
         android:text="@string/hello_blank_fragment" />
 
     <WebView

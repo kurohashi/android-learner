@@ -15,11 +15,15 @@ import com.sdk.fibo.WebviewHolder;
 
 public class MainActivity extends AppCompatActivity {
 
+    WebView webView;
+    boolean visibility;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        WebView webView = (WebView) findViewById(R.id.fibo);
+        visibility = false;
+        webView = (WebView) findViewById(R.id.fibo);
         webView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -34,10 +38,20 @@ public class MainActivity extends AppCompatActivity {
         webView.loadUrl("https://www.fibotalk.com/");
         webView.setBackgroundColor(Color.TRANSPARENT);
 //        webView.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
-        webView.bringToFront();
+        webView.setVisibility(View.INVISIBLE);
     }
 
-//    @Override
+    public void setTrue(View view) {
+        if(!visibility) {
+            webView.setVisibility(View.VISIBLE);
+            visibility = true;
+        } else {
+            webView.setVisibility(View.INVISIBLE);
+            visibility = false;
+        }
+    }
+
+    //    @Override
 //    public void onFragmentInteraction(Uri uri) {
 //
 //    }
