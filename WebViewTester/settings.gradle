@@ -1,2 +1,2 @@
-include ':app', ':fibo', ':FibotalkAPI'
+include ':app', ':fibo', ':sampleweb', ':tester2'
 rootProject.name='WebView Tester'
