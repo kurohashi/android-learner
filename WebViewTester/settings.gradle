@@ -1,2 +1,2 @@
-include ':app', ':fibo', ':sampleweb', ':tester2'
+include ':app', ':fibo', ':sampleweb'
 rootProject.name='WebView Tester'

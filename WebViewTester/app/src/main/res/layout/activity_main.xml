@@ -7,21 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-<!--    <WebView-->
-<!--        android:id="@+id/fibo"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:translationZ="2dp"-->
-<!--        android:elevation="2dp"-->
-<!--        tools:layout_editor_absoluteX="95dp"-->
-<!--        tools:layout_editor_absoluteY="0dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/button2">-->
-<!--    </WebView>-->
-
-
-
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -54,15 +39,14 @@
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:translationZ="500dp"
-        android:elevation="500dp"
-    />
+        android:translationZ="999999dp"
+        android:elevation="999999dp">
+    </fibo.sdk.sampleweb.FiboAPI>
 
-    <!--    <fragment-->
-<!--        android:id="@+id/fibo_frag"-->
-<!--        android:name="com.sdk.fibo.WebviewHolder"-->
-<!--        android:layout_width="293dp"-->
-<!--        android:layout_height="462dp"-->
-<!--        tools:layout_editor_absoluteX="59dp"-->
-<!--        tools:layout_editor_absoluteY="143dp" />-->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="-999dp"
+        android:elevation="-999dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

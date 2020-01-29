@@ -32,11 +32,11 @@ public class Fibo extends AppCompatActivity {
         });
     }
 
-    public void setTrue(View view) {
-        this.view.setTrue(view);
+    public void setTrue() {
+        this.view.setTrue();
     }
 
-    public void openDemo(View view) {
-        this.view.openDemo(view);
+    public void openDemo() {
+        this.view.openDemo();
     }
 }
