@@ -10,7 +10,7 @@ import android.widget.Toast;
 import fibo.sdk.sampleweb.Fibo;
 import fibo.sdk.sampleweb.FiboAPI;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Fibo fibo;
 
@@ -19,15 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fibo = new Fibo((FiboAPI) findViewById(R.id.fibo));
-        View v = findViewById(R.id.view);
-        v.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Log.e("touched...", event.toString());
-                Toast.makeText(getApplicationContext(),"Hello Touch",Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
     }
 
     public void setTrue(View view) {
@@ -35,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openDemo(View view) {
-        fibo.openDemo();
+    }
+
+    @Override
+    public void onClick(View v) {
+        fibo.setEvent("andy_click");
     }
 }

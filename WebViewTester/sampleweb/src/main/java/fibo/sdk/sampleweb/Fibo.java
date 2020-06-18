@@ -8,6 +8,8 @@ import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 
+import org.json.JSONObject;
+
 public class Fibo extends AppCompatActivity {
 
     private FiboAPI view;
@@ -38,5 +40,17 @@ public class Fibo extends AppCompatActivity {
 
     public void openDemo() {
         this.view.openDemo();
+    }
+
+    public void setEvent(String name, String val, String params) {
+        this.view.setEvent(name, val, params);
+    }
+
+    public void setEvent(String name, String val) {
+        this.view.setEvent(name, val, "");
+    }
+
+    public void setEvent(String name) {
+        this.view.setEvent(name, "", "");
     }
 }

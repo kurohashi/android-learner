@@ -8,6 +8,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import org.json.JSONObject;
+
 public class FiboAPI extends WebView {
 
     WebSettings webSettings;
@@ -40,6 +42,11 @@ public class FiboAPI extends WebView {
         this.setVisibility(View.INVISIBLE);
     }
 
+    public void initialize(String gid) {
+        this.setVisibility(View.VISIBLE);
+        this.loadUrl("javascript:setGid(" + gid + ")");
+    }
+
     public void setTrue() {
         this.setVisibility(View.VISIBLE);
         this.loadUrl("javascript:__ft__chatOpen__()");
@@ -50,7 +57,13 @@ public class FiboAPI extends WebView {
         this.loadUrl("javascript:fibo.open({'name': 'demo', 'type': 'modal', 'id': '000'})");
     }
 
+    public void setEvent(String name, String val, String params) {
+        this.setVisibility(View.VISIBLE);
+        this.loadUrl("javascript:fibo.setEvent('" + name + "','" + val + "','" + params + "')");
+    }
+
     public void hide() {
         this.setVisibility(View.INVISIBLE);
+        this.loadUrl("javascript:fibo.setEvent('andy_event')");
     }
 }
