@@ -1,2 +1,0 @@
-include ':app', ':fibo', ':sampleweb'
-rootProject.name='WebView Tester'
